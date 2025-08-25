@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Stylish</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body class="">
+    <nav class="bg-rose-400">
+  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+    <div class="relative flex h-16 items-center justify-between">
+      <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <!-- Mobile menu button-->
+        <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset" aria-controls="mobile-menu" aria-expanded="false">
+          <span class="absolute -inset-0.5"></span>
+          <span class="sr-only">Open main menu</span>
+          <!--
+            Icon when menu is closed.
+
+            Menu open: "hidden", Menu closed: "block"
+          -->
+          <svg class="block size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+          <!--
+            Icon when menu is open.
+
+            Menu open: "block", Menu closed: "hidden"
+          -->
+          <svg class="hidden size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex shrink-0 items-center">
+          <img class="h-10 w-auto rounded-full" src="./images/original.png" alt="Your Company">
+          <h1 class="text-white m-2 font-bold">Stylish</h1>
+        </div>
+        <div class="hidden sm:ml-6 sm:block">
+        <div class="flex space-x-4 relative">
+    <ul class="flex space-x-4">
+        <li class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page" data-section=".slite-1">Home</li>
+        <li class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white" data-section=".slite-2">About US</li>
+        <li>
+            <button id="shopButton" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white">
+                Shop
+            </button>
+        </li>
+        <li class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white " data-section=".slite-5">
+Customer</li>
+        <li class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700 hover:text-white "  data-section=".slite-6">
+Contact Us</li>
+    </ul>
+
+    <!-- القائمة المنسدلة -->
+    <div id="dropdown" class="absolute top-12 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white rounded-md shadow-lg hidden z-50">
+      <a href="./shop.html" class="block px-4 py-2 hover:bg-gray-700">Apparel Section</a>
+      <a href="./shoes.html" class="block px-4 py-2 hover:bg-gray-700">Shoe Section</a>
+      <a href="./bag.html" class="block px-4 py-2 hover:bg-gray-700">Bag Section</a>
+      <a href="./accessories.html" class="block px-4 py-2 hover:bg-gray-700">Accessories Section</a>
+    </div>
+    
+</div>
+        </div>
+      </div>
+      <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+
+        <!-- Profile dropdown -->
+        <div class="relative ml-3">
+          <div>
+          
+           
+              <img class="size-8 rounded-full" src="./images/loho2.jpeg" alt="">
+          </div>
+
+     
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu, show/hide based on menu state. -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="space-y-1 px-2 pt-2 pb-3">
+      <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+      <a href="#home" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Home</a>
+      <a href="#about" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About US</a>
+      <a href="#" id="shopButtonMenuo" class="relative block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">
+  Shop
+</a>
+      <!-- القائمة المنسدلة -->
+   
+<!-- Mobile dropdown menu for Shop -->
+<div id="dropdown1" class="absolute left-3 mt-1 w-44 rounded-md bg-gray-900 text-white shadow-lg hidden z-50">
+  <a href="./shop.html" class="block px-4 py-2 hover:bg-gray-700">Apparel Section</a>
+  <a href="./shoes.html" class="block px-4 py-2 hover:bg-gray-700">Shoe Section</a>
+  <a href="./bag.html" class="block px-4 py-2 hover:bg-gray-700">Bag Section</a>
+  <a href="./accessories.html" class="block px-4 py-2 hover:bg-gray-700">Accessories Section</a>
+</div>
+
+      <a href="#customer" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Customer</a>
+       <a href="#contact" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact Us</a>
+
+
+ 
+</div>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-red-100 ">
+
+  <div class="slite-1" id="home">
+    <div class="container m-auto p-3">
+      <div class="flex md:justify-center m-auto flex-col-reverse md:flex-row items-center p-3  ">
+
+
+        <div class="w-full md:w-1/2 p-4 -mt-5 md:mt-22 md:ml-20 ">
+           <h1 class="text-rose-400  font-bold text-4xl mb-1"> Stylish Fashion</h1>
+           <p class="p-1 font-bold ">blends elegance and comfort, offering a curated selection of high-quality designs for every woman. Discover your unique style with our latest fashion trends and harmonious color palettes.</p>
+           <button class="bg-rose-400 text-white px-4 py-2 rounded-md mt-3 hover:bg-rose-500 transition duration-300 cursor-pointer">Shop Now</button>
+          </div>
+
+        
+          <div class="w-full md:w-1/2 md:ml-36 p-4 mt-5 md:mt-10">
+            <img class="w-full md:w-1/2 p-3" src="./images/logo3.png" alt="">
+          </div>
+        
+
+
+        
+
+
+      </div>
+    </div>
+  </div>
+  <!-- end slite-1 -->
+
+  <!-- start-slite-2 -->
+   <div class="slite-2" id="about">
+    <div class="container m-auto p-3 ">
+      <div class="flex flex-col md:flex-row items-center">
+
+        <div class="w-full md:w-1/2 p-4 -mt-5  md:ml-20">
+           
+          <img class="w-full md:w-1/2 m-auto rounded-md" src="./images/b1.jpeg" alt="">
+        </div>
+
+        <div class="w-full md:w-1/2  md:-ml-28 p-4 mt-5 md:mt-10">
+          <h1 class="text-rose-400 font-bold text-3xl md:-mt-12"> Abuot us</h1>
+            <P class="p-1 text-sm">In the world of fashion, everything constantly evolves, but true elegance remains timeless. At Stylish Fashion, we offer you a unique shopping experience that meets all your needs in clothing, shoes, bags, and accessories, where we combine high quality, contemporary design, and ultimate comfort to help you stand out with a look that reflects your unique personality</P>
+            <P class="p-1 text-sm">At Stylish Fashion, we strive to provide you with a simple and enjoyable shopping experience, allowing you to browse the latest products, choose what suits you, and enjoy a stunning look that matches your unique style. There are no limits to elegance, and every piece we offer is designed to reflect your inner beauty, making you feel confident and radiant at every moment</P>
+            <p class="p-1 text-sm">At Stylish Fashion, we strive to provide you with a simple and enjoyable shopping experience, allowing you to browse the latest products, choose what suits you, and enjoy a stunning look that matches your unique style. There are no limits to elegance, and every piece we offer is designed to reflect your inner beauty, making you feel confident and radiant at every moment.</p>
+
+              <button class="bg-rose-400 text-white px-4 py-2 rounded-md mt-3 hover:bg-rose-500 transition duration-300 cursor-pointer">Learn more</button>
+        </div>
+        
+        
+      </div>   
+   </div>
+   </div>
+   
+
+  <!-- end slite-2 -->
+
+  <!-- srat slite-3 -->
+  <div class="start-3 m-24">
+    <div class="container m-auto p-3">
+
+      <div class="">
+        <h1 class="md:text-3xl text-xl mb-3 text-red-400 m-auto flex justify-center font-bold">Exclusive Discounts</h1>
+
+        <div class="flex flex-col md:flex-row justify-center items-center gap-5">
+        <!-- بطاقة المنتج -->
+        <div class="bg-white shadow-lg w-80  md:w-72 rounded-lg overflow-hidden p-4">
+            <img class="w-full p-3 m-auto  md:h-96 object-cover rounded-2xl" src="./images/p8.jpeg" alt="Product 1">
+            <div class="flex flex-row justify-center m-auto items-start">
+              <h2 class="text-lg font-semibold p-2 mx-5">Stylish Bag</h2>
+            <p class="text-gray-600 text-sm mt-2 p-1">Brand: FashionX</p>
+            </div>
+              <div class="flex justify-center items-center space-x-2">
+                     <span class="text-gray-500 line-through text-lg">$59.99</span> 
+        <span class="text-red-500 text-xl font-bold">$29.99</span> 
+            </div>
+            <button class="bg-rose-400 mt-4 w-full bg text-white py-2 rounded-lg hover:bg-rose-300 transition ">
+                Order Now
+            </button>
+        </div>
+
+        <!-- يمكنك تكرار البطاقات بنفس التنسيق مع تغيير تفاصيل المنتج -->
+        <div class="bg-white shadow-lg w-80  md:w-72 rounded-lg overflow-hidden p-4">
+            <img class="w-full p-3 m-auto  md:h-96 object-cover rounded-2xl" src="./images/s1.jpeg" alt="Product 1">
+            <div class="flex flex-row justify-center m-auto items-start">
+              <h2 class="text-lg font-semibold p-2 mx-5">Stylish Bag</h2>
+            <p class="text-gray-600 text-sm mt-2 p-1">Brand: FashionX</p>
+            </div>
+              <div class="flex justify-center items-center space-x-2">
+                     <span class="text-gray-500 line-through text-lg">$69.99</span> 
+        <span class="text-red-500 text-xl font-bold">$39.99</span> 
+            </div>
+            <button class="bg-rose-400 mt-4 w-full bg text-white py-2 rounded-lg hover:bg-rose-300 transition">
+                Order Now
+            </button>
+        </div>
+
+        <div class="bg-white shadow-lg w-80  md:w-72 rounded-lg overflow-hidden p-4">
+            <img class="w-full p-3 m-auto  md:h-96 object-cover rounded-2xl" src="./images/x2.jpeg" alt="Product 1">
+            <div class="flex flex-row justify-center m-auto items-start">
+              <h2 class="text-lg font-semibold p-2 mx-5">Stylish Bag</h2>
+            <p class="text-gray-600 text-sm mt-2 p-1">Brand: FashionX</p>
+            </div>
+            <div class="flex justify-center items-center space-x-2">
+                     <span class="text-gray-500 line-through text-lg">$79.99</span> 
+        <span class="text-red-500 text-xl font-bold">$49.99</span> 
+            </div>
+            <button class="bg-rose-400 mt-4 w-full bg text-white py-2 rounded-lg hover:bg-rose-300 transition">
+                Order Now
+            </button>
+        </div>
+
+      
+
+    
+
+      
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- end slite-3 -->
+
+
+  <!-- slite-4 -->
+
+   <div class="slite-4 ">
+    <div class="m-auto text-center md:mb-4 p-2 mt-6">
+         <h2 class="md:text-2xl text-xl  text-red-400 font-bold">Coming Soon</h2>
+    <p class=" mt-2">Stay tuned for our latest fashion arrivals!</p>
+   </div>
+    
+    <div class="container m-auto p-3">
+   
+
+   <div class="flex flex-col md:flex-row justify-center items-center gap-5">
+    <div class="bg-white shadow-lg w-80 md:w-72 rounded-lg overflow-hidden p-4">
+            <img class="w-full p-3 m-auto  md:h-96 object-cover rounded-2xl" src="./images/som3.jpeg" alt="Product 1">
+            <div class="flex flex-row justify-center m-auto items-start">
+              <h2 class="text-lg font-semibold p-2 mx-5">Stylish Bag</h2>
+            <p class="text-gray-600 text-sm mt-2 p-1">Brand: FashionX</p>
+            </div>
+              <div class="flex justify-center items-center ">
+                 
+        <span class="text-red-500 text-xl font-bold">$39.99</span> 
+            </div>
+            <button class="bg-rose-400 mt-4 w-full bg text-white py-2 rounded-lg hover:bg-rose-300 transition ">
+                Order Now
+            </button>
+        </div>
+
+        <div class="bg-white shadow-lg w-80  md:w-72 rounded-lg overflow-hidden p-4">
+            <img class="w-full p-3 m-auto  md:h-96 object-cover rounded-2xl" src="./images/son1.jpeg" alt="Product 1">
+            <div class="flex flex-row justify-center m-auto items-start">
+              <h2 class="text-lg font-semibold p-2 mx-5">Stylish Bag</h2>
+            <p class="text-gray-600 text-sm mt-2 p-1">Brand: FashionX</p>
+            </div>
+             <div class="flex justify-center items-center ">
+                 
+        <span class="text-red-500 text-xl font-bold">$59.99</span> 
+            </div>
+            <button class="bg-rose-400 mt-4 w-full bg text-white py-2 rounded-lg hover:bg-rose-300 transition ">
+                Order Now
+            </button>
+        </div>
+
+        <div class="bg-white shadow-lg w-80  md:w-72  rounded-lg overflow-hidden p-4">
+            <img class="w-full p-3 m-auto  md:h-96 object-cover rounded-2xl" src="./images/son2.jpeg" alt="Product 1">
+            <div class="flex flex-row justify-center m-auto items-start">
+              <h2 class="text-lg font-semibold p-2 mx-5">Stylish Bag</h2>
+            <p class="text-gray-600 text-sm mt-2 p-1">Brand: FashionX</p>
+            </div>
+             <div class="flex justify-center items-center ">
+                 
+        <span class="text-red-500 text-xl font-bold">$49.99</span> 
+            </div>
+            <button class="bg-rose-400 mt-4 w-full bg text-white py-2 rounded-lg hover:bg-rose-300 transition ">
+                Order Now
+            </button>
+        </div>
+
+
+   </div>
+
+   </div>
+   <!-- end slite-4 -->
+
+
+
+
+
+
+
+    <!-- statr slite-4 -->
+
+    <div class="slite-5 mt-36 " id="customer">
+      <div class="container m-auto">
+        <div class="flex flex-col justify-center space-x-3  m-auto items-center">
+           <h2 class="text-rose-400 text-2xl font-bold mb-3">Customer Reviews</h2>
+          <p class="text-sm mb-8">See what our lovely clients are saying about their Stylish experience. Real stories, real style straight from women who shine.</p>
+        </div>
+        <div class="flex flex-col justify-center space-x-3  md:flex-row">
+
+         
+
+          <div class="flex flex-col m-auto justify-center items-center rounded-lg bg-white text-black p-2 md:w-1/5 md:h-80 mb-3">
+            <img class="w-30 rounded-full" src="./images/csrmar.jpg" alt="">
+              <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  
+  <i class="far fa-star"></i>
+</div>
+            <h2 class="font-bold text-rose-400 mt-3">Reela</h2>
+            <p class="p-2 m-2 text-sm text-start">Lorem ipsum   amet consectetur adipisicing elit. A ratione animi voluptate illum eligendi</p>
+          </div>
+
+          <div class="flex flex-col m-auto justify-center items-center rounded-lg bg-white text-black p-2 md:w-1/5 md:h-80 mb-3">
+            <img class="w-30 rounded-full" src="./images/cstmar1.jpg" alt="">
+              <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="far fa-star"></i>
+  
+  <i class="far fa-star"></i>
+</div>
+            <h2 class="font-bold text-rose-400 mt-3">Fatema</h2>
+            <p class="p-2 m-2 text-sm text-start">Lorem ipsum   amet consectetur adipisicing elit. A ratione animi voluptate illum eligendi</p>
+          </div>
+
+          <div class="flex flex-col m-auto justify-center items-center rounded-lg bg-white text-black p-2 md:w-1/5 md:h-80 mb-3">
+            <img class="w-30 rounded-full" src="./images/custmar2.jpg" alt="">
+              <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  
+  <i class="far fa-star"></i>
+</div>
+            <h2 class="font-bold text-rose-400 mt-3">Ola</h2>
+            <p class="p-2 m-2 text-sm text-start">Lorem ipsum   amet consectetur adipisicing elit. A ratione animi voluptate illum eligendi</p>
+          </div>
+
+          <div class="flex flex-col m-auto justify-center items-center rounded-lg bg-white text-black p-2 md:w-1/5 md:h-80 mb-3">
+            
+            <img class="w-30" src="./images/text.jpeg" alt="">
+
+             <!-- التقييم بالنجوم -->
+  <div class="flex items-center justify-center mt-1 text-yellow-400 text-sm">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star-half-alt"></i>
+    <i class="far fa-star"></i>
+  </div>
+            <h2 class="font-bold text-rose-400 mt-3">Yasmen</h2>
+
+            <p class="p-2 m-2 text-sm text-start">Lorem ipsum   amet consectetur adipisicing elit. A ratione animi voluptate illum eligendi</p>
+          </div>
+          
+
+
+
+        </div>
+
+      </div>
+    </div>
+   </div>
+  </div>
+  
+
+    <!-- end slite-5 -->
+
+  <!-- start slite-6 -->
+   <div class="slite-6 mt-36 bg-gradient-to-tr bg-gray-800 text-white py-8" id="contact">
+    <div class="container m-auto p-3">
+      <div class="flex flex-col justify-center items-center md:flex-row space-x-10">
+
+        <div class="md:w-1/4 w-full p-4 m-5">
+          <p class=""> 
+            <a href="#accessories" class="flex items-center space-x-2 text-white hover:text-rose-400 transition duration-200" title="Home">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <span>Home</span>
+            </a>
+          </p>
+          <p class="my-3"> 
+            <a href="#accessories" class="flex items-center space-x-2 text-white hover:text-rose-400 transition duration-200"> <i class="fas fa-circle-info text-lg">
+
+            </i><span>About US</span>
+              </a>
+            </p>
+          <p class="my-3"> 
+            <a href="#accessories" class="flex items-center space-x-2 text-white hover:text-rose-400 transition duration-200"> <i class="fas fa-users text-lg"></i>
+              <span>Customer</span> 
+              </a>
+            </p>
+          <p class="my-3"> 
+            <a href="#accessories" class="flex items-center space-x-2 text-white hover:text-rose-400 transition duration-200"><i class="fas fa-envelope text-lg">
+
+            </i><span>Contact us</span>
+              </a>
+            </p>
+          <p class="my-3"> <a href="#accessories" class="flex items-center space-x-2 text-white hover:text-rose-400 transition duration-200"> 
+            <i class="fas fa-store text-lg"></i>
+            <span>
+              Shop
+            </span>
+            </a>
+          </p>
+        </div>
+        <div class="md:w-1/4 w-full p-4 m-5" >
+                  <P><a href="#apparel" class="flex items-center space-x-2 text-white hover:text-rose-400 transition duration-200">
+          <i class="fas fa-shirt text-lg"></i>
+          <span>Apparel</span>
+        </a>
+      </P>
+               <p class="my-3">
+  <a href="#shoes" class="flex items-center space-x-2 text-white hover:text-rose-400 transition duration-200">
+    <i class="fas fa-shoe-prints text-lg"></i>
+    <span>Shoes</span>
+  </a>
+</p>
+
+                  <P class="my-3">
+                    <a href="#bags" class="flex items-center space-x-2 text-white hover:text-rose-400 transition duration-200">
+          <i class="fas fa-bag-shopping text-lg"></i>
+          <span>Bags</span>
+        </a>
+      </P>
+                  <P class="my-3">
+                    <a href="/Accessories.html" class="flex items-center space-x-2 text-white hover:text-rose-400 transition duration-200">
+          <i class="fas fa-gem text-lg"></i>
+          <span>Accessories</span>
+        </a>
+      </P>
+        </div>
+        <div class="md:w-1/4 w-full p-4">
+          <h2 class="text-rose-400 font-bold mb-4">Contact Us</h2>
+          <input type="text" placeholder="Enter your name" class="border p-2 rounded-md mb-2 w-full">
+          <input type="email" placeholder="Enter your email" class="border p-2 rounded-md mb-2 w-full"> 
+          <textarea placeholder="Your message" class="border p-2 rounded-md mb-2 w-full"></textarea>
+          <button class="bg-rose-400 text-white px-4 py-2 rounded-md hover:bg-rose-500 transition duration-300 cursor-pointer m-auto text-center flex justify-center">Send Message</button>
+        </div>
+     
+
+      </div>
+     
+   </div>
+   </div>
+   <div class="flex justify-center m-auto bg-gray-900 text-white p-3 ">
+    <p><i class="fas fa-copyright    "></i>  mohammed Alnour</p>
+   </div>
+
+  <!-- end slite-6 -->
+ 
+        
+  
+
+
+
+
+
+
+
+
+
+
+
+   
+
+      
+
+</header>
+
+  <script src="./js/main.js"></script>
+  </body>
+</html>
